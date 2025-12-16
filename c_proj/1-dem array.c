@@ -1,10 +1,31 @@
 #include <stdio.h>
 
-int main(){
+/*
 
+Input type:
+Number of inputs: 4
+Inputs: 342 629 358 201
+Output: 
+*/
+
+int main(){
+	//initialize variable |number_of_inputs|
     int number_of_inputs;
 
-    int oddfunction(int a);
+
+	/*made custom function for odd and even numbers.
+    int functions return a number, while void functions dont.
+	
+	int function(int a){
+		return number
+	}
+	
+	void function(){
+		print stuff
+	}
+	
+	*/
+	int oddfunction(int a);
     int evenfunction(int b);
 
     printf("Number of inputs: ");
@@ -12,23 +33,29 @@ int main(){
 
     int numbers[number_of_inputs];
     printf("Inputs: ");
-
+	
+	
+	//Input numbers individually
     for(int i = 0; i<number_of_inputs; i=i+1){
         scanf("%d", &numbers[i]);
     }
 
-
+	//goes through each number in the array.
     for(int i = 0; i<number_of_inputs; i=i+1){
-
+		
+		//selects this if number is odd
         if (numbers[i] %2 == 1){
             numbers[i] = oddfunction(numbers[i]);
         }
+		//selects this if number is even
         else{
             numbers[i] = evenfunction(numbers[i]);
         }
 
     }
-
+	
+	
+	//prints numbers with new changes
     for(int i = 0; i<number_of_inputs; i=i+1){
         printf("%d ", numbers[i]);
     }
@@ -39,6 +66,8 @@ int main(){
 
 int oddfunction(int a){
     int new_number = 0;
+	
+	//flips the order of digits.
     while (a > 0){
         new_number = new_number * 10;
         int rem = a % 10;
