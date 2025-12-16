@@ -1,0 +1,14 @@
+How to use git
+1. Install git.
+2. go to directory. 
+Example: C:\Users\DeLL\Desktop\1styear_college
+3. Sign in to git
+
+
+To add files.
+1. Add all files:
+git add .
+2. Commit files:
+git commit -m "added comments lol"
+3. Push files to github repo
+git push origin
